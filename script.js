@@ -38,3 +38,16 @@ window.addEventListener('click', (e) => {
         modal.style.display = 'none';
     }
 });
+
+// Navigation
+document.getElementById('schedule').addEventListener('click', function () {
+    window.location.href = 'schedule.html';
+});
+
+document.getElementById('completed').addEventListener('click', function () {
+    window.location.href = 'completed.html';
+});
+
+document.getElementById('section8').addEventListener('click', function () {
+    window.location.href = 'index.html';
+});

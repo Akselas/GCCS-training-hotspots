@@ -9,42 +9,23 @@
 
 <div class="container">
     <!-- Background Image -->
-    <img src="https://raw.githubusercontent.com/Akselas/GCCS-training-hotspots/refs/heads/main/GCCS%20Schedule.png" 
-         class="screenshot" 
-         alt="Screen">
+    <img src="https://raw.githubusercontent.com/Akselas/GCCS-training-hotspots/refs/heads/main/BusinessTypeScreen.png" 
+        class="screenshot" 
+        alt="Screen">
 
     <!-- Hotspots -->
-    <div class="hotspot hotspotImport" 
-         data-text="Import button" 
-         data-detail="Through a specific Excel template, the user can upload multiple inspections. This feature has specific rules regarding the creation of units, tenants, and landlords."></div>
-
-    <div class="hotspot hotspotAddInspection" 
-         data-text="Add inspection button" 
-         data-detail="Allows the user to add an inspection to the table. Reference the 'How to Schedule Inspections in the GCCS System' document for a complete walkthrough."></div>
-
-    <div class="hotspot hotspotSMS" 
-         data-text="SMS button" 
-         data-detail="Allows the user to send SMS messages to tenants and landlords by selecting an inspection instance. Multiple selection and bulk sending are available."></div>
-
-    <div class="hotspot hotspostEmail" 
-         data-text="Email button" 
-         data-detail="Allows the user to send letters and reports to tenants and landlords to their email addresses."></div>
-
-    <div class="hotspot hotspotReport" 
-         data-text="Report button" 
-         data-detail="Downloads an .xlsx file of the table with the selected inspections."></div>
-
-    <div class="hotspot hotspotEdit" 
-         data-text="Edit button" 
-         data-detail="Allows the user to edit the scheduled inspection. Also lets the user complete the inspection if a 'Completed On' date is given."></div>
-
-    <div class="hotspot hotspostDelete" 
-         data-text="Delete button" 
-         data-detail="Removes the inspection from the table; multiple deletion is possible. A confirmation modal will show before the selection is deleted."></div>
-
-    <div class="hotspot hotspostDragAndDrop"
-         data-text="Sort and Drag & Drop" 
-         data-detail="The arrows sort the column by alphabetical or numerical order. The three lines (hamburger button) allow drag & drop to change the order of the columns."></div>
+    <div class="hotspot hotspotHousingImage" 
+        data-text="Editable Housing Image" 
+        data-detail="The image uploaded will be used in the reports printed from the system."></div>
+    <div class="hotspot hotspotHousingInfo" 
+        data-text="Editable Housing Information" 
+        data-detail="The information uploaded will be available on reports, letters and text messages."></div>
+    <div id = "schedule" class="hotspot hotspotScheduleButton" 
+        data-text="Schedule Button" 
+        data-detail="This button will take you to the Schedule page where you can manage inspections."></div>
+    <div id = "completed" class="hotspot hotspotCompletedButton" 
+        data-text="Completed Button"
+        data-detail="This button will take you to the Completed page where you can manage completed inspections."></div>
 
     <!-- Tooltip -->
     <div id="tooltip" class="tooltip"></div>
