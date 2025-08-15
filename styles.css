@@ -1,0 +1,87 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.screenshot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    border: 2px solid red;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+/* Hotspots individuales */
+.hotspotImport { top: 8.3%; left: 79%; width: 7.4%; height: 6.7%; border-radius: 10px; }
+.hotspotAddInspection { top: 8.3%; left: 87%; width: 11.5%; height: 6.7%; border-radius: 10px; }
+.hotspotSMS { top: 16.5%; left: 74.9%; width: 3.5%; height: 7.5%; border-radius: 10px; }
+.hotspostEmail { top: 16.5%; left: 78.9%; width: 3.5%; height: 7.5%; border-radius: 10px; }
+.hotspotReport { top: 16.5%; left: 82.9%; width: 3.5%; height: 7.5%; border-radius: 10px; }
+.hotspotEdit { top: 16.5%; left: 86.9%; width: 11.5%; height: 7.5%; border-radius: 10px; }
+.hotspostDelete { top: 16.7%; left: 44.2%; width: 11.5%; height: 7.5%; border-radius: 10px; }
+.hotspostDragAndDrop { top: 31%; left: 38%; width: 4%; height: 5%; border-radius: 10px; }
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+    z-index: 10;
+    max-width: 200px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}

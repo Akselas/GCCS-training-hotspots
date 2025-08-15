@@ -1,129 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-    html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-    .container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .screenshot {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* o "contain" si querés que no se recorte */
-    }
-
-    .hotspot {
-        position: absolute;
-        cursor: pointer;
-        border: 2px solid red; /* borde rojo */
-        background-color: transparent; /* sin relleno */
-        box-sizing: border-box; /* para que el borde no cambie el tamaño */
-    }
-    .hotspot::after {
-    content: attr(data-text);
-    position: absolute;
-    bottom: -25px;
-    left: 0;
-    background-color: rgba(0,0,0,0.8);
-    color: #fff;
-    padding: 5px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s;
-    z-index: 9999; /* asegura que quede arriba */
-}
-
-.hotspot:hover::after {
-    opacity: 1;
-}
-
-
-    .hotspotImport {
-        top: 7.2%;
-        left: 79%;
-        width: 7.4%;
-        height: 7%;
-        border-radius: 10px; 
-    }
-
-    .hotspotAddInspection {
-        top: 7.2%;
-        left: 87%;
-        width: 11.5%;
-        height: 7.3%;
-        border-radius: 10px; 
-    }
-
-    /* Tooltip */
-    .tooltip {
-        position: absolute;
-        background: rgba(0,0,0,0.8);
-        color: #fff;
-        padding: 8px;
-        border-radius: 5px;
-        font-size: 14px;
-        display: none;
-        z-index: 10;
-        max-width: 200px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <title>GCCS Training Hotspots</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="container">
-    <!-- Imagen de fondo -->
-    <img src="https://raw.githubusercontent.com/Akselas/GCCS-training-hotspots/refs/heads/main/GCCS%20Schedule.png" class="screenshot" alt="Pantalla">
+    <!-- Background Image -->
+    <img src="https://raw.githubusercontent.com/Akselas/GCCS-training-hotspots/refs/heads/main/GCCS%20Schedule.png" 
+         class="screenshot" 
+         alt="Screen">
 
-    <!-- Hotspot Import -->
-    <div class="hotspot hotspotImport" data-text="BOTON DE IMPORT"></div>
+    <!-- Hotspots -->
+    <div class="hotspot hotspotImport" 
+         data-text="Import button" 
+         data-detail="Through a specific Excel template, the user can upload multiple inspections. This feature has specific rules regarding the creation of units, tenants, and landlords."></div>
 
-    <!-- Hotspot 2 -->
     <div class="hotspot hotspotAddInspection" 
-        data-text="BOTON DE ADD INSPECTION">
-    </div>
+         data-text="Add inspection button" 
+         data-detail="Allows the user to add an inspection to the table. Reference the ‘How to Schedule Inspections in the GCCS System’ document for a complete walkthrough."></div>
+
+    <div class="hotspot hotspotSMS" 
+         data-text="SMS button" 
+         data-detail="Allows the user to send SMS messages to tenants and landlords by selecting an inspection instance. Multiple selection and bulk sending are available."></div>
+
+    <div class="hotspot hotspostEmail" 
+         data-text="Email button" 
+         data-detail="Allows the user to send letters and reports to tenants and landlords to their email addresses."></div>
+
+    <div class="hotspot hotspotReport" 
+         data-text="Report button" 
+         data-detail="Downloads an .xlsx file of the table with the selected inspections."></div>
+
+    <div class="hotspot hotspotEdit" 
+         data-text="Edit button" 
+         data-detail="Allows the user to edit the scheduled inspection. Also lets the user complete the inspection if a 'Completed On' date is given."></div>
+
+    <div class="hotspot hotspostDelete" 
+         data-text="Delete button" 
+         data-detail="Removes the inspection from the table; multiple deletion is possible. A confirmation modal will show before the selection is deleted."></div>
+
+    <div class="hotspot hotspostDragAndDrop" 
+         data-text="Sort and Drag & Drop" 
+         data-detail="The arrows sort the column by alphabetical or numerical order. The three lines (hamburger button) allow drag & drop to change the order of the columns."></div>
 
     <!-- Tooltip -->
     <div id="tooltip" class="tooltip"></div>
 </div>
 
-<script>
-    const hotspots = document.querySelectorAll('.hotspot');
-    const tooltip = document.getElementById('tooltip');
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-text"></div>
+    </div>
+</div>
 
-    hotspots.forEach(hs => {
-        hs.addEventListener('mouseenter', (e) => {
-            tooltip.innerText = hs.getAttribute('data-text');
-            tooltip.style.display = 'block';
-        });
-
-        hs.addEventListener('mousemove', (e) => {
-            tooltip.style.top = (e.pageY + 10) + 'px';
-            tooltip.style.left = (e.pageX + 10) + 'px';
-        });
-
-        hs.addEventListener('mouseleave', () => {
-            tooltip.style.display = 'none';
-        });
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
-
