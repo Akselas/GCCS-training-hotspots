@@ -20,10 +20,19 @@ hotspots.forEach(hs => {
         tooltip.style.display = 'none';
     });
 
-    // Click to open modal
+    // Click → si es nav, redirige; si no, abre modal
     hs.addEventListener('click', () => {
-        modalText.innerText = hs.getAttribute('data-detail');
-        modal.style.display = 'block';
+        if (hs.classList.contains('hotspot-nav')) {
+            // 🔹 Es un botón de navegación → redirige
+            const target = hs.getAttribute('data-target');
+            if (target) {
+                window.location.href = target;
+            }
+        } else {
+            // 🔹 Es un hotspot normal → abre modal
+            modalText.innerText = hs.getAttribute('data-detail');
+            modal.style.display = 'block';
+        }
     });
 });
 
@@ -37,17 +46,4 @@ window.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.style.display = 'none';
     }
-});
-
-// Navigation
-document.getElementById('schedule').addEventListener('click', function () {
-    window.location.href = 'schedule.html';
-});
-
-document.getElementById('completed').addEventListener('click', function () {
-    window.location.href = 'completed.html';
-});
-
-document.getElementById('section8').addEventListener('click', function () {
-    window.location.href = 'index.html';
 });

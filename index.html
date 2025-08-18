@@ -13,19 +13,27 @@
         class="screenshot" 
         alt="Screen">
 
-    <!-- Hotspots -->
+    <!-- Hotspots normales (muestran modal) -->
     <div class="hotspot hotspotHousingImage" 
         data-text="Editable Housing Image" 
         data-detail="The image uploaded will be used in the reports printed from the system."></div>
+
     <div class="hotspot hotspotHousingInfo" 
         data-text="Editable Housing Information" 
         data-detail="The information uploaded will be available on reports, letters and text messages."></div>
-    <div id = "schedule" class="hotspot hotspotScheduleButton" 
+
+    <!-- Hotspots de navegación (redirigen) -->
+    <div id="index_schedule" 
+        class="hotspot hotspotScheduleButton hotspot-nav" 
         data-text="Schedule Button" 
-        data-detail="This button will take you to the Schedule page where you can manage inspections."></div>
-    <div id = "completed" class="hotspot hotspotCompletedButton" 
+        data-detail="This button will take you to the Schedule page where you can manage inspections."
+        data-target="schedule.html"></div>
+
+    <div id="index_completed" 
+        class="hotspot hsIndex_Completed hotspot-nav" 
         data-text="Completed Button"
-        data-detail="This button will take you to the Completed page where you can manage completed inspections."></div>
+        data-detail="This button will take you to the Completed page where you can manage completed inspections."
+        data-target="completed.html"></div>
 
     <!-- Tooltip -->
     <div id="tooltip" class="tooltip"></div>

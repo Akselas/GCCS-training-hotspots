@@ -28,6 +28,8 @@ body, html {
     box-sizing: border-box;
 }
 
+/* Hotspots for Navigation */
+
 /* Hotspots for Schedule */
 .hotspotImport { top: 8.3%; left: 79%; width: 7.4%; height: 6.7%; border-radius: 10px; }
 .hotspotAddInspection { top: 8.3%; left: 87%; width: 11.5%; height: 6.7%; border-radius: 10px; }
@@ -37,13 +39,14 @@ body, html {
 .hotspotEdit { top: 16.5%; left: 86.9%; width: 11.5%; height: 7.5%; border-radius: 10px; }
 .hotspostDelete { top: 16.7%; left: 44.2%; width: 11.5%; height: 7.5%; border-radius: 10px; }
 .hotspostDragAndDrop { top: 31%; left: 38%; width: 4%; height: 5%; border-radius: 10px; }
-.hotspotSection8 { top: 32.5%; left: 0.7%; width: 8%; height: 5%; border-radius: 10px; }
+.hsSchedule_Section8 { top: 15%; left: 0.7%; width: 8%; height: 5%; border-radius: 10px; }
+.hsSchedule_Completed { top: 33%; left: 0.7%; width: 7.5%; height: 4%; border-radius: 10px; }
 
 /* Hotspots for section8 */
 .hotspotHousingImage { top: 16%; left: 18.5%; width: 39.5%; height: 29.5%; border-radius: 10px; }
 .hotspotHousingInfo { top: 16%; left: 60%; width: 39.5%; height: 29.5%; border-radius: 10px; }
 .hotspotScheduleButton { top: 27.5%; left: 0.4%; width: 7%; height: 4%; border-radius: 10px; }
-.hotspotCompletedButton { top: 33%; left: 0.4%; width: 8%; height: 4%; border-radius: 10px; }
+.hsIndex_Completed { top: 33%; left: 0.4%; width: 7%; height: 4%; border-radius: 10px; }
 
 /* Tooltip */
 .tooltip {
