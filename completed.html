@@ -9,13 +9,40 @@
 
 <div class="container">
     <!-- Background Image -->
-    <img src="" 
+    <img src="https://raw.githubusercontent.com/Akselas/GCCS-training-hotspots/refs/heads/main/GCCS%20Completed.png" 
          class="screenshot" 
          alt="Screen">
 
     <!-- Hotspots -->
+    <div class="hotspot hotspotReinspect" 
+        data-text="Reinspect Button" 
+        data-detail="Allows the user to re-inspect a completed inspection. This will create a new inspection instance with the same details as the completed one on the Schedule able"></div>
+    <div class="hotspot hotspotInspect"
+        data-text="Inspect Button" 
+        data-detail="Allows the user to inspect a completed inspection. This will take you to the Deficiencies UI"></div>
+    <div class="hotspot hotspotSwitch" 
+        data-text="Switch Button"
+        data-detail="Switches the view between completed inspections and scheduled inspections."></div>
+    <div class="hotspot hotspotExportCompleted"
+        data-text="Export Button" 
+        data-detail="Downloads an .xlsx file of the table with the selected completed inspections."></div>
+    <div class="hotspot hotspotSMSCompleted" 
+        data-text="SMS Button" 
+        data-detail="Allows the user to send SMS messages to tenants and landlords for completed inspections."></div>
+    <div class="hotspot hotspotEmailCompleted" 
+        data-text="Email Button"
+        data-detail="Allows the user to send letters and reports to tenants and landlords for completed inspections."></div>
+    <div class="hotspot hotspotReportCompleted" 
+        data-text="Report Button" 
+        data-detail="Generates a PDF report for the selected completed inspections."></div>
     
     <!-- Navigation -->
+    <div id="index_schedule" 
+        class="hotspot hotspotScheduleButton hotspot-nav" 
+        data-text="Schedule Button" 
+        data-detail="This button will take you to the Schedule page where you can manage inspections."
+        data-target="schedule.html"></div>
+
     <div id="schedule_section8" 
           class="hotspot hotspot-nav hsSchedule_Section8" 
           data-text="Section 8 Button"

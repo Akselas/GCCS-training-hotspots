@@ -48,6 +48,14 @@ body, html {
 .hotspotScheduleButton { top: 27.5%; left: 0.4%; width: 7%; height: 4%; border-radius: 10px; }
 .hsIndex_Completed { top: 33%; left: 0.4%; width: 7%; height: 4%; border-radius: 10px; }
 
+/* Hotspots for Completed */
+.hotspotReinspect { top: 16.6%; left: 20.1%; width: 9.3%; height: 7.3%; border-radius: 10px; }
+.hotspotInspect { top: 16.6%; left: 30.1%; width: 7.7%; height: 7.3%; border-radius: 10px; }
+.hotspotSwitch { top: 16.5%; left: 89%; width: 4.4%; height: 8.9%; border-radius: 10px; }
+.hotspotExportCompleted { top: 16.5%; left: 94.1%; width: 4%; height: 8.9%; border-radius: 10px; }
+.hotspotSMSCompleted { top: 26.5%; left: 80.1%; width: 3.7%; height: 7.5%; border-radius: 10px; }
+.hotspotEmailCompleted {top: 26.5%; left: 84.7%; width: 3.7%; height: 7.5%; border-radius: 10px;}
+.hotspotReportCompleted { top: 26.5%; left: 89%; width: 9.2%; height: 7.5%; border-radius: 10px; }
 /* Tooltip */
 .tooltip {
     position: absolute;
